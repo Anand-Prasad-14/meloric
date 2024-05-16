@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/design_default_color_background"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/txtVw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Now Playing: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#03A9F4" />
+
+    <TextView
+        android:id="@+id/txtSname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtVw1"
+        android:layout_toRightOf="@+id/txtVw1"
+        android:text="TextView"
+        android:textColor="#F44336"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/txtVw1"
+        android:src="@drawable/pathaan" />
+
+    <ImageButton
+        android:id="@+id/btnBackward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="44dp"
+        android:backgroundTint="@color/black"
+        android:src="@android:drawable/ic_media_rew"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnBackward"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/btnBackward"
+        android:backgroundTint="@color/teal_200"
+        android:src="@android:drawable/ic_media_play"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnPlay"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/btnPlay"
+        android:backgroundTint="@color/black"
+        android:src="@android:drawable/ic_media_pause"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/btnForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnPause"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/btnPause"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@+id/imageButton3"
+        android:src="@android:drawable/ic_media_ff"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/txtStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sBar"
+        android:text="0 min, 0 sec"
+        android:textColor="@color/black" />
+
+    <SeekBar
+        android:id="@+id/sBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnBackward"
+        android:layout_toLeftOf="@+id/txtSongTime"
+        android:layout_toRightOf="@+id/txtStartTime"
+        android:progressTint="@color/black" />
+
+    <TextView
+        android:id="@+id/txtSongTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sBar"
+        android:layout_toRightOf="@+id/btnForward"
+        android:text="0 min, 0 sec "
+        android:textColor="@color/black" />
+</RelativeLayout>
